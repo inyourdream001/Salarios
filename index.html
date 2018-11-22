@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script>
+  function cargar(sueldos)
+  {
+    var f;
+    for(f=0;f<sueldos.length;f++)
+    {
+      var v;
+      v=prompt('Ingrese sueldo:','');
+      sueldos[f]=parseInt(v);
+    }
+  }
+
+  function calcularGastos(sueldos)
+  {
+    var total=0;
+    var f;
+    for(f=0;f<sueldos.length;f++)
+    {
+      total=total+sueldos[f];
+    }
+    document.write('Listado de sueldos<br>');
+    for(f=0;f<sueldos.length;f++)
+    {
+      document.write(sueldos[f]+'<br>');
+    }
+    document.write('Total de gastos en sueldos:'+total);
+  }
+  function calcularPromedio(sueldos) {
+      var suma;
+      suma=0;
+      for(var f=0;f<5;f++) {
+          suma=suma+sueldos[f];
+      }
+      promedio=suma/5;
+      document.write('<br>');
+      document.write("Promedio de sueldos: "+promedio);
+  }
+  function mayor(sueldos){
+    for (var f = 0; i < sueldos.length; f++) {
+    document.write('El sueldo mayor es: '+math.max(sueldos));
+    }
+  function menor(sueldos){
+    for (var f = 0; f < sueldos.length; f++) {
+      document.write('El sueldo minimo es: '+math.max(sueldos));
+    }
+  }
+
+  }
+  function mayoresMenores(sueldos) {
+      var may,men;
+      may=0;
+      men=0;
+      for(var f=0;f<5;f++) {
+          if (sueldos[f]>promedio) {
+        may++;
+          } else {
+              if (sueldos[f]<promedio) {
+                  men++;
+              }
+      }
+  }
+  document.write('<br>');
+  document.write("Cantidad de sueldos mayores al promedio: "+may);
+  document.write('<br>');
+  document.write("Cantidad de sueldos menores al promedio: "+men);
+}
+  var sueldos;
+  sueldos=new Array(5);
+  cargar(sueldos);
+  calcularGastos(sueldos);
+  calcularPromedio(sueldos);
+  mayoresMenores(sueldos);
+  mayor(sueldos);
+  menor(sueldos);
+
+</script>
+</html>
